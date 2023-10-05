@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse   
 
 def home(request):
-    return HttpResponse('<h1>this my firsr write on my own site & this is a homee page </h1>')
+    return render(request, 'index.html')
 
 def about(request):
     return HttpResponse('<h1>sina abdollahi  </h1>')
