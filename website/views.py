@@ -8,5 +8,5 @@ def about(request):
     return render(request, 'website/about.html')
 
 def contact(request):
-    return render(request, 'contact.html')
+    return render(request, 'website/contact.html')
 
