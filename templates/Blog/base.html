@@ -18,9 +18,9 @@
     <title>Travel</title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet" />
-    <!-- 
+    <!--  
         CSS
-        =============================================  -->
+        =============================================   -->
     <link rel="stylesheet" href="{% static 'css//linearicons.css' %}" />
     <link rel="stylesheet" href="{% static 'css//font-awesome.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css//bootstrap.css' %}" />
@@ -70,16 +70,8 @@
               <li>
                 <a href="{% url 'website:about' %}">About</a>
               </li>
-              <li class="menu-has-children">
-                <a href="">Blog</a>
-                <ul>
-                  <li>
-                    <a href="{% url 'blog:blog' %}">Blog Home</a>
-                  </li>
-                  <li>
-                    <a href="{% url 'blog:blog-single' %}">Blog Single</a>
-                  </li>
-                </ul>
+              <li>
+                <a href="{% url 'blog:blog' %}">Blog Home</a>
               </li>
               <li class="menu-has-children">
                 <a href="">Pages</a>
