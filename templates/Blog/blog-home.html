@@ -110,7 +110,7 @@
                   <img class="img-fluid" src="{{ post.image.url }}" alt="" />
                 </div>
                 <a class="posts-title" href="{% url 'blog:blog-single' pid=post.id %}"><h3>{{ post.titel }}</h3></a>
-                <p class="excert">{{ post.content|truncatechars:100 }}</p>
+                <p class="excert">{{ post.content|truncatechars:100|safe }}</p>
                 <a href="/blog/{{ post.id }}" class="primary-btn">View More</a>
               </div>
             </div>
