@@ -9,9 +9,9 @@
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								Contact Us				
+								ارتباط با ما				
 							</h1>	
-							<p class="text-white link-nav"><a href="{% url "website:index" %}">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="{% url "website:contact" %}"> Contact Us</a></p>
+							<p class="text-white link-nav"><a href="{% url "website:index" %}">خانه </a>  <span class="lnr lnr-arrow-right"></span>  <a href="{% url "website:contact" %}"> ارتباط با ما</a></p>
 						</div>	
 					</div>
 				</div>
@@ -29,9 +29,9 @@
 									<span class="lnr lnr-home"></span>
 								</div>
 								<div class="contact-details">
-									<h5>Binghamton, New York</h5>
+									<h5>شهرکرد دانشگاه دولتی شهرکرد</h5>
 									<p>
-										4343 Hinkle Deegan Lake Road
+										شهرکرد- بلوار رهبر- دانشگاه شهرکرد
 									</p>
 								</div>
 							</div>
@@ -40,8 +40,8 @@
 									<span class="lnr lnr-phone-handset"></span>
 								</div>
 								<div class="contact-details">
-									<h5>00 (958) 9865 562</h5>
-									<p>Mon to Fri 9am to 6 pm</p>
+									<h5>۰۳۸۳۲۳۲۴۴۰۱</h5>
+									<p>شنبه تا پنجشنبه ساعت 8 تا 4</p>
 								</div>
 							</div>
 							<div class="single-contact-address d-flex flex-row">
@@ -49,8 +49,8 @@
 									<span class="lnr lnr-envelope"></span>
 								</div>
 								<div class="contact-details">
-									<h5>support@colorlib.com</h5>
-									<p>Send us your query anytime!</p>
+									<h5>info [at] sku.ac.ir</h5>
+									<p>پیام های خود را برای ما بگذارید</p>
 								</div>
 							</div>														
 						</div>
@@ -60,25 +60,25 @@
 								{% csrf_token %}
 								<div class="row">	
 									<div class="col-lg-6 form-group">
-										<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''"  class="common-input mb-20 form-control" required="" type="text">
+										<input name="name"  style='direction:rtl;text-align:right;' placeholder="نام خود را وارد کنید" onfocus="this.placeholder = ''"  class="common-input mb-20 form-control" required="" type="text">
 									
-										<input name="last_name" placeholder="Enter your last name" onfocus="this.placeholder = ''"  class="common-input mb-20 form-control" required="" type="text">
+										<input name="last_name" style='direction:rtl;text-align:right;' placeholder="نام خانوادگی را وارد کنید" onfocus="this.placeholder = ''"  class="common-input mb-20 form-control" required="" type="text">
 
-										<input name="phone_number" placeholder="Enter your phone number" onfocus="this.placeholder = ''"  class="common-input mb-20 form-control" required="" type="number">
+										<input name="phone_number" style='direction:rtl;text-align:right;' placeholder="شماره موبایل خود را وارد کنید" onfocus="this.placeholder = ''"  class="common-input mb-20 form-control" required="" type="number">
 
-										<input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
+										<input name="email" placeholder="test@gmail.com" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
 
-										<input name="subject" placeholder="Enter subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter subject'" class="common-input mb-20 form-control" required="" type="text">
+										<input name="subject" style='direction:rtl;text-align:right;' placeholder="موضوع" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter subject'" class="common-input mb-20 form-control" required="" type="text">
 									</div>
 									<div class="col-lg-6 form-group"  >
-										<textarea class="common-textarea form-control" name="massage" placeholder="Enter Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Messege'" required="" height="200"></textarea>				
+										<textarea class="common-textarea form-control" name="massage" style='direction:rtl;text-align:right;' placeholder="پیام خود را بنویسید" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Messege'" required="" height="200"></textarea>				
 									</div>
 									<div class="col-lg-12">
 										<div class="pb-3">
 											{{form.captcha}}
 										</div>
 										<div class="alert-msg" style="text-align: left;"></div>
-										<button class="genric-btn primary" type="submit" style="float: right;">Send Message</button>											
+										<button class="genric-btn primary" type="submit" style="float: right;">ارسال پیام</button>											
 									</div>
 								</div>
 								

@@ -58,7 +58,7 @@ ROBOTS_USE_HOST = False
 
 SUMMERNOTE_THEME = 'bs4'
 
-
+#set google map 
 
 MULTI_CAPTCHA_ADMIN = {
     'engine': 'simple-captcha',
