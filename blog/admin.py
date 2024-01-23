@@ -13,7 +13,7 @@ class PostAdmin(SummernoteModelAdmin):
     summernote_fields = ('content')
 
 class commentsAdmin(admin.ModelAdmin):
-    list_display = ("subject","name", "approved")
+    list_display = ("subject","name", "approved","post")
     list_filter = ("approved","post") 
 
 
