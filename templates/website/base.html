@@ -36,7 +36,25 @@
 				<div class="header-top">
 					<div class="container">
 			  		<div class="row align-items-center">
-			  			
+						<div class="col-lg-6 col-sm-6 col-6 header-top-left">
+							<ul >
+								{% if request.user.is_authenticated %}
+								<li>
+									<a href="#" dir="rtl">شما به عنوان {{request.user.username}} وارد شدین</a>
+								</li>
+								<li>
+									<a href="{% url 'account:logout' %}" dir="rtl">خارج شوید</a>
+								</li>
+								{% else %}
+								<li>
+									<a  href="{% url 'account:login' %}" dir="rtl">وارد شوید</a>
+								</li>
+								<li>
+									<a href="{% url 'account:signup' %}" dir="rtl">ثبت نام کنید</a>
+								</li>
+								{% endif %}
+							</ul>
+						</div>
 			  			<div class="col-lg-6 col-sm-6 col-6 header-top-right">
 							<div class="header-social">
 								<a href="#"><i class="fa fa-facebook"></i></a>
@@ -76,52 +94,36 @@
 					<div class="row">
 						<div class="col-lg-3  col-md-6 col-sm-6">
 							<div class="single-footer-widget">
-								<h6>About Agency</h6>
+								<h6>درمورد ما</h6>
 								<p>
-									The world has become so fast paced that people don’t want to stand by reading a page of information, they would much rather look at a presentation and understand the message. It has come to a point 
+									ما علاقه مندان به حوزه تکنولوژی هستیم. 
 								</p>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-6 col-sm-6">
 							<div class="single-footer-widget">
-								<h6>Navigation Links</h6>
+								<h6>دسترسی اسان</h6>
 								<div class="row">
 									<div class="col">
 										<ul>
-											<li><a href="#">Home</a></li>
-											<li><a href="#">Feature</a></li>
-											<li><a href="#">Services</a></li>
-											<li><a href="#">Portfolio</a></li>
+											<li><a href="#">خانه</a></li>
+											<li><a href="#">اینده</a></li>
+											<li><a href="#">خدمات</a></li>
+											<li><a href="#">سوابق</a></li>
 										</ul>
 									</div>
 									<div class="col">
 										<ul>
-											<li><a href="#">Team</a></li>
-											<li><a href="#">Pricing</a></li>
-											<li><a href="#">Blog</a></li>
-											<li><a href="#">Contact</a></li>
+											<li><a href="#">تیم</a></li>
+											<li><a href="#">قیمت</a></li>
+											<li><a href="#">وبلاگ</a></li>
+											<li><a href="#">ارتباط با ما</a></li>
 										</ul>
 									</div>										
 								</div>							
 							</div>
 						</div>							
-						<div class="col-lg-3  col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>Newsletter</h6>
-								<p>
-									For business professionals caught between high OEM price and mediocre print and graphic output.									
-								</p>								
-								<div id="mc_embed_signup">
-									<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscription relative">
-										<div class="input-group d-flex flex-row">
-											<input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
-											<button class="btn bb-btn"><span class="lnr lnr-location"></span></button>		
-										</div>									
-										<div class="mt-10 info"></div>
-									</form>
-								</div>
-							</div>
-						</div>
+						
 						<div class="col-lg-3  col-md-6 col-sm-6">
 							<div class="single-footer-widget mail-chimp">
 								<h6 class="mb-20">InstaFeed</h6>

@@ -67,7 +67,7 @@
               <p class="excert">{{ posts.content|safe }}</p>
             </div>
           </div>
-          <div class="navigation-area">
+          <!--<div class="navigation-area">
             <div class="row">
               <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
                 <div class="thumb">
@@ -94,7 +94,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div>-->
           <div class="comments-area" dir="rtl" >
             <h4>{{comments|length}} دیدگاه</h4>
             <div class="comment-list" >
@@ -120,25 +120,26 @@
             </div>
           </div>
           <div class="comment-form">
-            <h4>Leave a Comment</h4>
+            <h4 lang="fa">دیدگاه خود را وارد کنید</h4>
             <form method="post" action="{% url 'blog:blog-single' pid=posts.id %}" >
               {% csrf_token %}
               <input type="hidden" name="post" value={{posts.id}}>
               <div class="form-group form-inline">
-                <div class="form-group col-lg-6 col-md-12 name">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Enter Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Name'" />
-                </div>
+               
                 <div class="form-group col-lg-6 col-md-12 email">
-                  <input type="email" name="email" class="form-control" id="email" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" />
+                  <input type="email" name="email" class="form-control" id="email" dir="rtl" placeholder="ایمیل را وارد کنید" onfocus="this.placeholder = ''" onblur="this.placeholder = 'ایمیل را وارد کنید'" />
+                </div>
+                <div class="form-group col-lg-6 col-md-12 name">
+                  <input type="text" name="name" class="form-control" id="name" dir="rtl" placeholder=" نام کابری را وارد کنید" onfocus="this.placeholder = ''" onblur="this.placeholder = 'نام کابری را وارد کنید'" />
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" name="subject" class="form-control" id="subject" placeholder="Subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Subject'" />
+                <input type="text" name="subject" class="form-control" id="subject" dir="rtl" placeholder="موضوع را وارد کنید " onfocus="this.placeholder = ''" onblur="this.placeholder = 'موضوع را وارد کنید '" />
               </div>
               <div class="form-group">
-                <textarea class="form-control mb-10" rows="5" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
+                <textarea class="form-control mb-10" rows="5" name="message" dir="rtl" placeholder="دیدگاه خود را بنویسید" onfocus="this.placeholder = ''" onblur="this.placeholder = 'دیدگاه خود را بنویسید'" required=""></textarea>
               </div>
-              <button href="#" type="submit" class="primary-btn text-uppercase">Post Comment</button>
+              <button href="#" type="submit" lang="fa" class="primary-btn text-uppercase">ارسال  کامنت</button>
             </form>
           </div>
         </div>

@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'captcha',
     'blog.apps.BlogConfig',
     'django_summernote',
+    'account.apps.AccountConfig',
 ]
 
 
@@ -60,6 +61,7 @@ SUMMERNOTE_THEME = 'bs4'
 
 #set google map 
 
+#captcha
 MULTI_CAPTCHA_ADMIN = {
     'engine': 'simple-captcha',
 }
