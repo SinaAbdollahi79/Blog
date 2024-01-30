@@ -28,30 +28,16 @@
                 {% csrf_token %}
                 <div class="half p-4 py-md-5">
                   <div class="w-100">
-                    <h3 class="mb-4" dir="rtl">ساخت اکانت</h3>
+                    
                   </div>
                   <div class="form-group mt-3" dir="rtl">
-                    <label class="label" for="name" dir="rtl">نام کاربری</label>
-                    <input type="text" name="username" class="form-control" placeholder="نام کاربری" required />
+                    <label class="label" for="name" dir="rtl">رمز عبور</label>
+                    <input type="text" name="password1" class="form-control" placeholder="رمز عبور" required />
                   </div>
                   <div class="form-group">
-                    <label class="label" for="password">رمزعبور</label>
-                    <input id="password-field" name="password" type="password" class="form-control" placeholder="رمزعبور" required />
+                    <label class="label" for="password"> تایید رمز عبور</label>
+                    <input id="password-field" name="password2" type="password" class="form-control" placeholder="رمز عبور" required />
                     <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
-                  </div>
-                </div>
-                <div class="half p-4 py-md-5 bg-primary">
-                  
-                  <div class="form-group d-md-flex">
-                    <div class="w-50 text-left">
-                      <label class="checkbox-wrap checkbox-primary mb-0">
-                        Remember Me<input type="checkbox" checked />
-                        <span class="checkmark"></span>
-                      </label>
-                    </div>
-                    <div class="w-50 text-md-right">
-                      <a href="#">Forgot Password</a>
-                    </div>
                   </div>
                   <p class="w-100 text-center" style="color:white;">&mdash; Or Sign In With &mdash;</p>
                   <div class="w-100">
@@ -59,16 +45,30 @@
                       <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
                       <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
                     </p>
+                    <div class="form-group">
+                        <button type="submit" class="form-control btn btn-secondary rounded submit px-3">Sign me in now</button>
+                      </div>
                   </div>
+                </div>
+                <div class="half p-4 py-md-5 bg-primary" style="background-color:rgb(60, 179, 113)">
+                    <h3 class="mb-4" dir="rtl">ساخت اکانت</h3>
+
+                    <label class="label" for="name" dir="rtl">نام </label>
+                    <input type="text" name="first_name" class="form-control" placeholder="نام " required />
+                    <label class="label" for="name" dir="rtl">نام خانوادگی</label>
+                    <input type="text" name="last_name" class="form-control" placeholder="نام خانوادگی" required />
+                    <label class="label" for="name" dir="rtl">نام کاربری</label>
+                    <input type="text" name="username" class="form-control" placeholder="نام کاربری" required /><label class="label" for="name" dir="rtl">نام کاربری</label>
+                    <label class="label" for="name" dir="rtl">ایمیل </label>
+                    <input type="text" name="email" class="form-control" placeholder="ایمیل " required />
+                  
                 </div>
               </form>
             </div>
           </div>
           
         </div>
-        <div class="form-group">
-            <button type="submit" class="form-control btn btn-secondary rounded submit px-3">Sign me in now</button>
-          </div>
+        
       </div>
     </section>
 
