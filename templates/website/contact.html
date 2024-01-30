@@ -2,7 +2,9 @@
  {% load static %}
  {% block extra_head %}
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ google_maps_api_key }}&callback=initMap">
+ <link rel="stylesheet" href="https://static.neshan.org/sdk/mapboxgl/v1.13.2/neshan-sdk/v1.1.1/index.css" />
+
+<script src="https://static.neshan.org/sdk/mapboxgl/v1.13.2/neshan-sdk/v1.1.1/index.js"></script>
 </script>
  {% endblock %}
            {% block content %}	
@@ -27,27 +29,8 @@
 			<section class="contact-page-area section-gap">
 				<div class="container">
 					<div class="row">
-						<div id="map" style="width:100%; height: 445px;" >
-							<script>
-								// تعریف تابع initMap برای ایجاد نقشه
-								function initMap() {
-									// مختصات مرکز نقشه
-									var myLatLng = {lat: 51.5074, lng: -0.1278};
-						
-									// ایجاد یک نقشه با استفاده از مختصات مرکز
-									var map = new google.maps.Map(document.getElementById('map'), {
-										center: myLatLng,
-										zoom: 12
-									});
-						
-									// ایجاد یک نشانگر بر روی نقشه
-									var marker = new google.maps.Marker({
-										position: myLatLng,
-										map: map,
-										title: 'محل مورد نظر'
-									});
-								}
-							</script>
+						<div id="maps" style="width:100%; height: 445px;" class="mb-5">
+							
 							
 						</div>
 						<div class="col-lg-4 d-flex flex-column address-wrap">
@@ -118,3 +101,29 @@
 			<!-- End contact-page Area -->
 
 {% endblock %}
+{% block script %}
+<script>
+	const neshanMap = new nmp_mapboxgl.Map({
+		mapType: nmp_mapboxgl.Map.mapTypes.neshanVector,
+		container: "maps",
+		zoom: 11,
+		pitch: 0,
+		center: [50.82292475656962,32.35452852141381],
+		minZoom: 2,
+		maxZoom: 21,
+		trackResize: true,
+		mapKey: "web.d9d1a59dc8bf4e6784b1427b9adf83a4",
+		poi: true,
+		traffic: true,
+		mapTypeControllerStatus: {
+			show: true,
+			position: 'bottom-left'
+		}
+	});
+	var marker = new nmp_mapboxgl.Marker()
+	
+            .setLngLat([50.82292475656962,32.35452852141381])
+            .addTo(neshanMap);
+	</script>
+{% endblock script %}
+

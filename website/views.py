@@ -18,8 +18,7 @@ def contact(request):
             messages.success(request, '.تیکت شما با موفقیعت ثبت شد')
         else:
             messages.error(request, '.متاسفانه تیکت شما ثبت نشد')
-    google_maps_api_key = settings.GOOGLE_MAPS_API_KEY        
     form = ContactForm()
 
-    return render(request, 'website/contact.html' , {'form': form ,'google_maps_api_key': google_maps_api_key})
+    return render(request, 'website/contact.html' , {'form': form })
 
