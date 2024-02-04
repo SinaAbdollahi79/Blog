@@ -20,10 +20,12 @@ def login_view(request):
 
 def signup_view(request):
     if request.method == 'POST':
-        name = request.POST.get('name', None)
         username = request.POST["username"]
         password = request.POST["password1"]
-        User.objects.create(username=username, password=password)
+        first_name = request.POST["first_name"]
+        last_name = request.POST["last_name"]
+        email = request.POST["email"]
+        User.objects.create(username=username, password=password , first_name=first_name, last_name=last_name, email=email)
     return render(request, 'account/signup.html' )
 
 

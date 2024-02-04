@@ -11004,6 +11004,7 @@ h5,
 
 @media (min-width: 992px) {
     .half {
+        direction: rtl;
         width: 50%;
     }
 }

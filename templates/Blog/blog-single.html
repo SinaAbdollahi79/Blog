@@ -12,7 +12,7 @@
         <div class="about-content col-lg-12">
           <h1 class="text-white">{{ posts.titel }}</h1>
           <p class="text-white link-nav">
-            <a href="{% url 'website:index' %}">Home</a> <span class="lnr lnr-arrow-right"></span><a href="{% url 'blog:blog' %}">Blog</a> <span class="lnr lnr-arrow-right"></span> <a href="blog-single.html">{{ posts.titel }}</a>
+           <a href="blog-single.html">{{ posts.titel }}</a><span class="lnr lnr-arrow-right"></span></a><a href="{% url 'blog:blog' %}">وبلاگ</a><span class="lnr lnr-arrow-right"></span><a href="{% url 'website:index' %}">خانه
           </p>
         </div>
       </div>
@@ -41,7 +41,7 @@
                   <a href="#">{{ posts.published_date|date:'Y/m/d' }}</a> <span class="lnr lnr-calendar-full"></span>
                 </p>
                 <p class="view col-lg-12 col-md-12 col-6">
-                  <a href="#">{{ posts.conted_view }}Views</a> <span class="lnr lnr-eye"></span>
+                  <a href="#">{{ posts.conted_view }} بازدید</a> <span class="lnr lnr-eye"></span>
                 </p>
                 <p class="comments col-lg-12 col-md-12 col-6">
                   <a href="#">{{comments|length}} دیدگاه</a> <span class="lnr lnr-bubble"></span>
@@ -124,8 +124,18 @@
             <form method="post" action="{% url 'blog:blog-single' pid=posts.id %}" >
               {% csrf_token %}
               <input type="hidden" name="post" value={{posts.id}}>
+              {% if request.user.is_authenticated %}
+
               <div class="form-group form-inline">
-               
+                <div class="form-group col-lg-6 col-md-12 email">
+                  <input type="email" value={{user.email}} name="email" class="form-control" id="email" dir="rtl" disabled />
+                </div>
+                <div class="form-group col-lg-6 col-md-12 name">
+                  <input type="text" value={{user.username}} name="name" class="form-control" id="name" dir="rtl" disabled />
+                </div>
+              </div>
+              {% else %}            
+              <div class="form-group form-inline">
                 <div class="form-group col-lg-6 col-md-12 email">
                   <input type="email" name="email" class="form-control" id="email" dir="rtl" placeholder="ایمیل را وارد کنید" onfocus="this.placeholder = ''" onblur="this.placeholder = 'ایمیل را وارد کنید'" />
                 </div>
@@ -133,6 +143,7 @@
                   <input type="text" name="name" class="form-control" id="name" dir="rtl" placeholder=" نام کابری را وارد کنید" onfocus="this.placeholder = ''" onblur="this.placeholder = 'نام کابری را وارد کنید'" />
                 </div>
               </div>
+              {% endif %}
               <div class="form-group">
                 <input type="text" name="subject" class="form-control" id="subject" dir="rtl" placeholder="موضوع را وارد کنید " onfocus="this.placeholder = ''" onblur="this.placeholder = 'موضوع را وارد کنید '" />
               </div>

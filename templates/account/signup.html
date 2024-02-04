@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
   <head>
     <title>ساخت اکانت</title>
     <meta charset="utf-8" />
@@ -26,10 +26,22 @@
             <div class="login-wrap">
               <form action="#" class="signin-form d-md-flex" method="post" action="{% url 'account:login' %}">
                 {% csrf_token %}
-                <div class="half p-4 py-md-5">
-                  <div class="w-100">
+                <div class="half p-4 py-md-5" dir="rtl">
+                  <!--<div class="w-100"></div>-->
+                    <h3 class="mb-4" dir="rtl">ساخت اکانت</h3>
+
+                    <label class="label" for="name" >نام </label>
+                    <input type="text" name="first_name" class="form-control" placeholder="نام " required />
+                    <label class="label" for="name" >نام خانوادگی</label>
+                    <input type="text" name="last_name" class="form-control" placeholder="نام خانوادگی" required />
+                    <label class="label" for="name" >نام کاربری</label>
+                    <input type="text" name="username" class="form-control" placeholder="نام کاربری" required />
+                    <label class="label" for="name" >ایمیل </label>
+                    <input type="text" name="email" class="form-control" placeholder="ایمیل " required />
                     
-                  </div>
+                  
+                </div>
+                <div class="half p-4 py-md-5 bg-primary" style="background-color:rgb(60, 179, 113)">
                   <div class="form-group mt-3" dir="rtl">
                     <label class="label" for="name" dir="rtl">رمز عبور</label>
                     <input type="text" name="password1" class="form-control" placeholder="رمز عبور" required />
@@ -39,31 +51,16 @@
                     <input id="password-field" name="password2" type="password" class="form-control" placeholder="رمز عبور" required />
                     <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                   </div>
-                  <p class="w-100 text-center" style="color:white;">&mdash; Or Sign In With &mdash;</p>
+                  <p class="w-100 text-center" style="color:white;">&mdash; ورود با &mdash;</p>
                   <div class="w-100">
                     <p class="social-media d-flex justify-content-center">
                       <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
                       <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
-                    </p>
-                    <div class="form-group">
-                        <button type="submit" class="form-control btn btn-secondary rounded submit px-3">Sign me in now</button>
-                      </div>
+                    </p>                  
                   </div>
-                </div>
-                <div class="half p-4 py-md-5 bg-primary" style="background-color:rgb(60, 179, 113)">
-                    <h3 class="mb-4" dir="rtl">ساخت اکانت</h3>
-
-                    <label class="label" for="name" dir="rtl">نام </label>
-                    <input type="text" name="first_name" class="form-control" placeholder="نام " required />
-                    <label class="label" for="name" dir="rtl">نام خانوادگی</label>
-                    <input type="text" name="last_name" class="form-control" placeholder="نام خانوادگی" required />
-                    <label class="label" for="name" dir="rtl">نام کاربری</label>
-                    <input type="text" name="username" class="form-control" placeholder="نام کاربری" required /><label class="label" for="name" dir="rtl">نام کاربری</label>
-                    <label class="label" for="name" dir="rtl">ایمیل </label>
-                    <input type="text" name="email" class="form-control" placeholder="ایمیل " required />
-                    <div class="form-group">
-                      <button type="submit" class="form-control btn btn-secondary rounded submit px-3">Sign me in now</button>
-                    </div>
+                  <div class="form-group">
+                    <button type="submit" class="form-control btn btn-secondary rounded submit px-3" >ثبت نام</button>
+                  </div>
                 </div>
               </form>
             </div>
