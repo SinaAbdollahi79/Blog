@@ -46,9 +46,9 @@ INSTALLED_APPS = [
     'robots',
     'captcha',
     'blog.apps.BlogConfig',
-    'django_summernote',
     'account.apps.AccountConfig',
-    'website'
+    'website',
+    'ckeditor',
 ]
 
 

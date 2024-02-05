@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
+from ckeditor.fields import RichTextField
 
 
 
@@ -15,7 +16,7 @@ class categories(models.Model):
 class post(models.Model):
     titel = models.CharField(max_length=100)
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    content = models.TextField()
+    content = RichTextField()
     image = models.ImageField(upload_to="blog/", default="blog/default.png")
     category = models.ManyToManyField(categories)
     conted_view = models.IntegerField(default=0)
