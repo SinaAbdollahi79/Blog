@@ -1,5 +1,5 @@
 # my site
- my first site that is a simple Blog 
+this site is about Blog
  I use django template 
  use neshan map 
  use a editor for txt 
