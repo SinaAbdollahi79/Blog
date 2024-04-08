@@ -6,7 +6,6 @@ from blog.forms import commentform
 from django.contrib import messages
 
 
-
 # set filter for category and set pageinator
 def blog(request, **kwargs):
     posts = post.objects.filter(status=1)
@@ -22,25 +21,27 @@ def blog(request, **kwargs):
         posts = posts.get.page(1)
     except EmptyPage:
         posts = posts.get.page(1)
-    
+
     context = {"posts": posts}
     return render(request, "blog/blog-home.html", context)
 
 
 def single(request, pid):
-    if request.method == 'POST':
+    if request.method == "POST":
         form = commentform(request.POST)
         if form.is_valid():
-             form.save()
-             messages.success(request, '.تیکت شما با موفقیعت ثبت شد')
+            form.save()
+            messages.success(request, ".تیکت شما با موفقیعت ثبت شد")
         else:
-            messages.error(request, '.متاسفانه تیکت شما ثبت نشد')
-            
+            messages.error(request, ".متاسفانه تیکت شما ثبت نشد")
+
     posts = post.objects.filter(status=1)
     posts = get_object_or_404(post, pk=pid)
-    comments = comment.objects.filter(post=posts.id,approved=1).order_by('-create_date')
+    comments = comment.objects.filter(post=posts.id, approved=1).order_by(
+        "-create_date"
+    )
     froms = commentform()
-    context = {"posts": posts, "comments": comments , "froms": froms}
+    context = {"posts": posts, "comments": comments, "froms": froms}
     return render(request, "blog/blog-single.html", context)
 
 
@@ -52,6 +53,3 @@ def search(request):
 
     context = {"posts": posts}
     return render(request, "blog/blog-home.html", context)
-
-
-

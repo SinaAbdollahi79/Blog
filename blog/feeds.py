@@ -16,5 +16,3 @@ class LatestEntriesFeed(Feed):
 
     def item_content(self, item):
         return item.content[:100]
-
-  

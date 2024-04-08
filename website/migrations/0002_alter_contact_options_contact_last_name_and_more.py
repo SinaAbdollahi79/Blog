@@ -6,22 +6,22 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('website', '0001_initial'),
+        ("website", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='contact',
-            options={'ordering': ['-created_date']},
+            name="contact",
+            options={"ordering": ["-created_date"]},
         ),
         migrations.AddField(
-            model_name='contact',
-            name='last_name',
-            field=models.CharField(default='not empty', max_length=50),
+            model_name="contact",
+            name="last_name",
+            field=models.CharField(default="not empty", max_length=50),
         ),
         migrations.AlterField(
-            model_name='contact',
-            name='name',
+            model_name="contact",
+            name="name",
             field=models.CharField(max_length=50),
         ),
     ]

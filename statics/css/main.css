@@ -2855,7 +2855,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .single-other-issue .thumb img {
-    height: 35vh;
+    height: 20vh;
     width: auto;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
