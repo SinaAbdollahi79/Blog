@@ -46,3 +46,11 @@ class comment(models.Model):
     approved = models.BooleanField(default=False)
     create_date = models.DateField(auto_now_add=True)
     updated_date = models.DateField(auto_now=True)
+
+    class Meta:
+        ordering = ["-create_date"]
+
+
+    def __str__(self):
+        return self.name
+

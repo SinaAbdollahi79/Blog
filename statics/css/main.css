@@ -4155,6 +4155,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     border: 1px solid #eee;
     padding: 50px 20px;
     margin-top: 50px;
+    direction: ltr;
 }
 
 @media (max-width: 414px) {

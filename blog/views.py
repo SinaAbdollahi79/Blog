@@ -1,8 +1,7 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse
-from blog.models import post, comment
+from .models import post, comment
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
-from blog.forms import commentform
+from .forms import commentform
 from django.contrib import messages
 
 
@@ -40,8 +39,8 @@ def single(request, pid):
     comments = comment.objects.filter(post=posts.id, approved=1).order_by(
         "-create_date"
     )
-    froms = commentform()
-    context = {"posts": posts, "comments": comments, "froms": froms}
+    form = commentform()
+    context = {"posts": posts, "comments": comments, "froms": form}
     return render(request, "blog/blog-single.html", context)
 
 

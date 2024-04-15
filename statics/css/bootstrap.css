@@ -6014,7 +6014,7 @@ button.bg-dark:focus {
 
 .d-flex {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
 }
 
 .d-inline-flex {
