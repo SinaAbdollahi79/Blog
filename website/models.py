@@ -1,6 +1,6 @@
 from django.db import models
 
-
+# ارتباط با ما
 class contact(models.Model):
     name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50, default="")

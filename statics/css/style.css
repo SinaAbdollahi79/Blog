@@ -7232,7 +7232,7 @@ a.close.disabled {
     background-color: #007bff !important;
 }
 
-a.bg-primary:hover,
+. a.bg-primary:hover,
 a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
@@ -11245,4 +11245,20 @@ h5,
 .signin-form {
     display: flex;
     flex-direction: row-reverse;
+}
+
+.s_name2 {
+    display: flex;
+}
+
+.s_name {
+    margin: 2px 4px 4px 400px;
+}
+
+.s_pass {
+    color: #fff !important;
+}
+
+.s_pass2 {
+    margin: 2px 4px 4px 400px;
 }
